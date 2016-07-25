@@ -1,0 +1,3 @@
+# djangoiscool
+
+a django project that I can pull code from...
