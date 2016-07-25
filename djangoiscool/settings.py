@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+from djangoiscool.generate_key import generate_key
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '*w#3+mfvx*4r%&vbhd(!0g7u#dng$t&33a@xpos7exfw=q9o%_'
+SECRET_KEY = '{}'.format(generate_key(40, 128))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
