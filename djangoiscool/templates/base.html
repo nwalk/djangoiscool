@@ -1,0 +1,30 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="nwalk">
+    <link rel="icon" href="{% static 'media/pictures/favicon.ico' %}">
+    {% block head %}
+    {% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{% static 'style_sheet.css' %}" rel="stylesheet">
+{#    <link href="{% static "bootstrap/css/bootstrap.css" %}" rel="stylesheet">#}
+    <link href="{% static "bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
+
+</head>
+<body>
+<div class="container">
+{% block content %}{% endblock %}
+</div>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"
+          integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+          crossorigin="anonymous">
+    </script>
+    <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>
