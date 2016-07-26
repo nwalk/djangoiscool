@@ -1,0 +1,43 @@
+﻿{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}Contact{% endblock %}
+
+{% block head %}
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <div id="results" class="col-md-6 contact-form">
+                <h4>Email Us</h4>
+                <form id="contact_form" action="" method="POST">{% csrf_token %}
+                    <input class="form-control" id="id_sender" name="sender" type="email" placeholder="Your Email Address" required /><br>
+                    <input class="form-control" id="id_subject" maxlength="50" name="subject" type="text" placeholder="Subject" required/><br>
+                    <textarea class="form-control" cols="40" id="id_message" name="message" rows="10" placeholder="Message..." required></textarea><br>
+                    <button style="margin-top: 5px;" type="submit" class="btn btn-info btn-md">Send Email</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript">
+        var frm = $('#contact_form');
+        frm.submit(function () {
+            $.ajax({
+                type: frm.attr('method'),
+                url: frm.attr('action'),
+                data: frm.serialize(),
+                success: function (data) {
+                    $("#results").html(data);
+                },
+                error: function (data) {
+                    $("#results").html("Something went wrong!");
+                }
+            });
+            return false;
+        });
+    </script>
+{% endblock %}

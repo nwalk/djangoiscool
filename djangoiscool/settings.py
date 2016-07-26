@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.website',
+    'apps.contact',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -51,6 +52,14 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+# Email settings for contact app
+# EMAIL_USE_TLS = True
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_PORT = 587
+# EMAIL_HOST_USER = 'example@example.com'
+# EMAIL_HOST_PASSWORD = 'password'
+
 
 ROOT_URLCONF = 'djangoiscool.urls'
 
