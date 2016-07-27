@@ -1,0 +1,74 @@
+/*NAVIGATION BAR*/
+.navbar-default-1 {
+    /*background-color: peru;*/
+    background-color:black;
+    border-color: black;
+}
+.navbar-default-1 .navbar-brand {
+    color: ghostwhite;
+    /*font-weight: bold;*/
+    /*text-align: center;*/
+}
+.navbar-default-1 .navbar-brand:hover,
+.navbar-default-1 .navbar-brand:focus {
+    /*color:black;*/
+    font-weight: bold;
+}
+.navbar-default-1 .navbar-nav > li > a {
+    color: ghostwhite;
+}
+.navbar-default-1 .navbar-nav > li > a:hover,
+.navbar-default-1 .navbar-nav > li > a:focus {
+    /*color: yellow;*/
+    font-weight: bold;
+    background-color:transparent;
+}
+.navbar-default-1 .navbar-nav > .active > a,
+.navbar-default-1 .navbar-nav > .active > a:hover,
+.navbar-default-1 .navbar-nav > .active > a:focus {
+    /*color: ghostwhite;*/
+    /*background-color: transparent;*/
+}
+.navbar-default-1 .navbar-nav > .open > a,
+.navbar-default-1 .navbar-nav > .open > a:hover,
+.navbar-default-1 .navbar-nav > .open > a:focus {
+    /*color: purple;*/
+    /*background-color: purple;*/
+}
+.navbar-default-1 .navbar-nav > .dropdown > a .caret {
+    border-top-color: ghostwhite;
+    border-bottom-color: ghostwhite;
+}
+.navbar-default-1 .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default-1 .navbar-nav > .dropdown > a:focus .caret {
+    border-top-color: ghostwhite;
+    border-bottom-color: ghostwhite;
+}
+.navbar-default-1 .navbar-nav > .open > a .caret,
+.navbar-default-1 .navbar-nav > .open > a:hover .caret,
+.navbar-default-1 .navbar-nav > .open > a:focus .caret {
+    border-top-color: #ffbbbc;
+    border-bottom-color: #ffbbbc;
+}
+.navbar-default-1 .navbar-toggle {
+    border-color: ghostwhite;
+}
+.navbar-default-1 .navbar-toggle:hover,
+.navbar-default-1 .navbar-toggle:focus {
+    /*background-color: hotpink;*/
+    font-weight: bold;
+}
+.navbar-default-1 .navbar-toggle .icon-bar {
+    background-color: ghostwhite;
+}
+@media (max-width: 767px) {
+    .navbar-default-1 .navbar-nav .open .dropdown-menu > li > a {
+        color: ghostwhite;
+    }
+    .navbar-default-1 .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default-1 .navbar-nav .open .dropdown-menu > li > a:focus {
+        /*color: #ffbbbc;*/
+        font-weight: bold;
+        background-color:transparent;
+    }
+}
